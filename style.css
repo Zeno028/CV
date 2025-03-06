@@ -1,46 +1,121 @@
-body {
-    font-family: Arial, sans-serif;
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f2f5, #e1e9f2); /* Soft gradient from light gray to light blue */
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
 .container {
-    width: 900px;
-    margin: 20px auto;
-    background: white;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Header Styling */
 .header {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
+    text-align: center;
+    padding: 40px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.profiles {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
 .profile {
-    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
 }
+
 .profile img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    background: #ddd;
-    display: block;
+    margin-bottom: 20px;
 }
-h2, h3 {
+
+.profile h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.profile p {
     margin: 5px 0;
+    font-size: 1rem;
 }
+
+.profile p strong {
+    font-weight: bold;
+}
+
+.profile p i {
+    color: #3498db; /* Blue color for icons */
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+/* Section Styling */
 .section {
-    margin: 20px 0;
+    margin-top: 40px;
 }
-.section h3 {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
 }
+
 .grid {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
-.column {
-    width: 48%;
+
+.column p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .profiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 10px;
+    }
 }
